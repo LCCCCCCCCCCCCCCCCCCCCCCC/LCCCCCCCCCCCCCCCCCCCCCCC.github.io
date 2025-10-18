@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography - My Passion</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #f0f0f0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            color: #ffd700;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        nav {
+            margin-top: 1.5rem;
+        }
+
+        nav a {
+            color: #ffd700;
+            text-decoration: none;
+            margin: 0 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            background: rgba(255, 215, 0, 0.1);
+        }
+
+        nav a:hover {
+            background: rgba(255, 215, 0, 0.3);
+            transform: translateY(-2px);
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            display: none;
+            background: rgba(255, 255, 255, 0.95);
+            color: #333;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            margin-bottom: 2rem;
+        }
+
+        section.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            color: #764ba2;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        figure {
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        figcaption {
+            margin-top: 1rem;
+            font-style: italic;
+            color: #555;
+            font-size: 1rem;
+        }
+
+        .ai-prompt {
+            font-style: italic;
+            color: #666;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f5f5f5;
+            border-left: 4px solid #667eea;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+
+        table th, table td {
+            border: 2px solid #667eea;
+            padding: 1rem;
+            text-align: left;
+        }
+
+        table th {
+            background: #764ba2;
+            color: white;
+            font-weight: bold;
+        }
+
+        table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        form {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-weight: bold;
+        }
+
+        form input, form textarea, form select {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 2px solid #667eea;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        form button {
+            background: #764ba2;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        form button:hover {
+            background: #667eea;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.7);
+            color: #f0f0f0;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin-bottom: 1rem;
+        }
+
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+
+        .validation-links {
+            margin-top: 1rem;
+        }
+
+        .validation-links a {
+            display: inline-block;
+            margin: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Photography - Capturing Moments</h1>
+        <nav>
+            <a href="#what" onclick="showSection('what')">What</a> ✦
+            <a href="#who" onclick="showSection('who')">Who</a> ✦
+            <a href="#when" onclick="showSection('when')">When</a> ✦
+            <a href="#where" onclick="showSection('where')">Where</a> ✦
+            <a href="#how" onclick="showSection('how')">How</a> ✦
+            <a href="#why" onclick="showSection('why')">Why</a> ✦
+            <a href="#ai-prompts" onclick="showSection('ai-prompts')">AI Prompts</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="what" class="active">
+            <h2>What is Photography?</h2>
+            
+            <p>Photography is the art, application, and practice of creating images by recording light, either electronically or chemically. It's a powerful medium that allows us to freeze moments in time, tell stories, and express creativity. From landscape photography to portraits, from wildlife to street photography, this hobby encompasses a vast range of styles and techniques.</p>
+
+            <p>Modern photography combines technical knowledge with artistic vision. Understanding concepts like exposure, composition, and lighting helps create compelling images that resonate with viewers. Whether using a professional DSLR camera or a smartphone, the principles of good photography remain the same.</p>
+
+            <figure>
+                <img src="images/camera-equipment.jpg" alt="Professional camera with lenses">
+                <figcaption>Professional photography equipment ready for action</figcaption>
+            </figure>
+
+            <table>
+                <tr>
+                    <th>Photography Type</th>
+                    <th>Description</th>
+                    <th>Difficulty Level</th>
+                </tr>
+                <tr>
+                    <td>Landscape</td>
+                    <td>Capturing natural scenery and outdoor vistas</td>
+                    <td>Beginner</td>
+                </tr>
+                <tr>
+                    <td>Portrait</td>
+                    <td>Photographing people and their expressions</td>
+                    <td>Intermediate</td>
+                </tr>
+                <tr>
+                    <td>Wildlife</td>
+                    <td>Capturing animals in their natural habitat</td>
+                    <td>Advanced</td>
+                </tr>
+                <tr>
+                    <td>Street</td>
+                    <td>Documenting everyday life in public spaces</td>
+                    <td>Intermediate</td>
+                </tr>
+            </table>
+
+            <p>Photography has evolved tremendously over the past decades, from film to digital, and now incorporating artificial intelligence for enhanced editing capabilities. It remains one of the most accessible yet challenging hobbies, offering endless opportunities for learning and creative expression.</p>
+        </section>
+
+        <section id="who">
+            <h2>Who Practices Photography?</h2>
+
+            <p>Photography attracts people from all walks of life, ages, and backgrounds. Professional photographers make their living through commercial work, photojournalism, weddings, and portraits. Hobbyist photographers pursue it for personal enjoyment, artistic expression, and documenting their lives and surroundings.</p>
+
+            <p>The photography community is diverse and welcoming. From teenagers discovering their creative voice to retirees finding a new passion, anyone can pick up a camera and start creating. Online communities, local camera clubs, and photography workshops provide spaces for photographers to connect, share knowledge, and inspire each other.</p>
+
+            <figure>
+                <img src="images/photographer-action.jpg" alt="Photographer taking a picture">
+                <figcaption>A photographer in action, capturing the perfect moment</figcaption>
+            </figure>
+            <p class="ai-prompt">AI Prompt: "Photorealistic image of a photographer crouching with a camera, taking a photo during golden hour, silhouette against sunset"</p>
+
+            <p>Many famous photographers have shaped the art form: Ansel Adams with his breathtaking landscapes, Steve McCurry with his iconic portraits, and Annie Leibovitz with her celebrity photography. These masters inspire countless aspiring photographers to develop their own unique style and vision.</p>
+
+            <form>
+                <h3>Join Our Photography Community</h3>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="experience">Experience Level:</label>
+                <select id="experience" name="experience">
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                    <option value="professional">Professional</option>
+                </select>
+
+                <label for="interests">Photography Interests:</label>
+                <textarea id="interests" name="interests" rows="4" placeholder="Tell us what type of photography interests you..."></textarea>
+
+                <button type="submit">Join Community</button>
+            </form>
+
+            <p>Whether you're just starting out or have years of experience, the photography community welcomes you. Share your work, learn from others, and grow your skills in this rewarding hobby.</p>
+        </section>
+
+        <section id="when">
+            <h2>When to Practice Photography?</h2>
+
+            <p>The beauty of photography is that every moment offers potential. However, certain times provide optimal lighting and conditions for specific types of photography. Understanding when to shoot can dramatically improve your results and expand your creative possibilities.</p>
+
+            <p>Golden hour, occurring shortly after sunrise and before sunset, provides warm, soft light that's ideal for almost any type of photography. Blue hour, the period of twilight before sunrise and after sunset, offers a magical quality perfect for landscape and cityscape photography. Midday light, while harsh, can create dramatic shadows and high-contrast scenes.</p>
+
+            <figure>
+                <img src="images/golden-hour.jpg" alt="Golden hour landscape">
+                <figcaption>Golden hour casting beautiful warm light across a landscape</figcaption>
+            </figure>
+            <p class="ai-prompt">AI Prompt: "Photorealistic landscape during golden hour, warm orange and pink sky, silhouetted trees, dramatic clouds, professional photography quality"</p>
+
+            <table>
+                <tr>
+                    <th>Time of Day</th>
+                    <th>Best For</th>
+                    <th>Lighting Characteristics</th>
+                </tr>
+                <tr>
+                    <td>Golden Hour (Sunrise)</td>
+                    <td>Landscapes, Portraits</td>
+                    <td>Warm, soft, directional</td>
+                </tr>
+                <tr>
+                    <td>Midday</td>
+                    <td>Architecture, Street</td>
+                    <td>Harsh, overhead, high contrast</td>
+                </tr>
+                <tr>
+                    <td>Golden Hour (Sunset)</td>
+                    <td>Portraits, Nature</td>
+                    <td>Warm, golden, flattering</td>
+                </tr>
+                <tr>
+                    <td>Blue Hour</td>
+                    <td>Cityscapes, Landscapes</td>
+                    <td>Cool, even, ethereal</td>
+                </tr>
+                <tr>
+                    <td>Night</td>
+                    <td>Astrophotography, Light trails</td>
+                    <td>Dark, requires long exposure</td>
+                </tr>
+            </table>
+
+            <p>Seasonal changes also affect photography opportunities. Spring offers blooming flowers and fresh greenery, summer provides long days and vibrant colors, autumn delivers stunning foliage, and winter creates dramatic contrasts with snow and bare trees. Each season presents unique photographic challenges and rewards.</p>
+        </section>
+
+        <section id="where">
+            <h2>Where to Practice Photography?</h2>
+
+            <p>Photography locations are limitless - anywhere you can point a camera offers potential for great images. National parks and nature reserves provide spectacular landscapes and wildlife opportunities. Urban environments offer street photography, architecture, and human interest stories. Even your own backyard can become a photography laboratory.</p>
+
+            <p>Professional photographers often scout locations in advance, considering factors like lighting, accessibility, and interesting subjects. Popular photography destinations include Yosemite National Park for landscapes, New York City for street photography, and African safaris for wildlife. However, you don't need to travel far to create compelling images.</p>
+
+            <figure>
+                <img src="images/mountain-landscape.jpg" alt="Mountain landscape">
+                <figcaption>Majestic mountain range - a photographer's paradise</figcaption>
+            </figure>
+            <p class="ai-prompt">AI Prompt: "Photorealistic mountain landscape with snow-capped peaks, clear blue sky, alpine meadow in foreground, professional nature photography"</p>
+
+            <p>Urban photography thrives in cities with distinctive architecture and vibrant street life. Historic downtown areas, modern business districts, and culturally diverse neighborhoods each offer unique visual stories. Look for interesting light, shadows, reflections, and human interactions that capture the essence of city life.</p>
+
+            <table>
+                <tr>
+                    <th>Location Type</th>
+                    <th>Photography Opportunities</th>
+                    <th>Best Time</th>
+                </tr>
+                <tr>
+                    <td>National Parks</td>
+                    <td>Landscapes, Wildlife, Waterfalls</td>
+                    <td>Early morning, Late afternoon</td>
+                </tr>
+                <tr>
+                    <td>Cities</td>
+                    <td>Architecture, Street, Night lights</td>
+                    <td>Golden hour, Blue hour</td>
+                </tr>
+                <tr>
+                    <td>Beaches</td>
+                    <td>Seascapes, Sunsets, Reflections</td>
+                    <td>Sunrise, Sunset</td>
+                </tr>
+                <tr>
+                    <td>Forests</td>
+                    <td>Nature, Wildlife, Macro</td>
+                    <td>Overcast days, Early morning</td>
+                </tr>
+            </table>
+
+            <p>Remember that great photography isn't just about exotic locations. Train your eye to see interesting compositions, light, and moments wherever you are. Some of the most powerful photographs come from familiar, everyday places viewed with fresh perspective and creative vision.</p>
+        </section>
+
+        <section id="how">
+            <h2>How to Get Started with Photography?</h2>
+
+            <p>Beginning photography doesn't require expensive equipment. Start with whatever camera you have - even a smartphone. Learn the fundamentals: exposure (aperture, shutter speed, ISO), composition (rule of thirds, leading lines), and lighting. These basics apply whether you're using a phone or professional gear.</p>
+
+            <p>Understanding the exposure triangle is crucial. Aperture controls depth of field and light amount, shutter speed freezes or blurs motion, and ISO adjusts sensor sensitivity. Balancing these three elements allows you to capture properly exposed images in various lighting conditions while achieving your creative vision.</p>
+
+            <figure>
+                <img src="images/camera-settings.jpg" alt="Camera settings display">
+                <figcaption>Understanding camera settings is fundamental to photography</figcaption>
+            </figure>
+            <p class="ai-prompt">AI Prompt: "Close-up photorealistic image of DSLR camera display showing manual settings, aperture, shutter speed, ISO values clearly visible"</p>
+
+            <form>
+                <h3>Photography Skill Assessment</h3>
+                <label for="camera-type">What camera do you use?</label>
+                <select id="camera-type" name="camera-type">
+                    <option value="smartphone">Smartphone</option>
+                    <option value="point-shoot">Point and Shoot</option>
+                    <option value="mirrorless">Mirrorless</option>
+                    <option value="dslr">DSLR</option>
+                </select>
+
+                <label for="skill-area">What would you like to improve?</label>
+                <input type="text" id="skill-area" name="skill-area" placeholder="e.g., composition, lighting, editing">
+
+                <label for="learning-goals">Your Learning Goals:</label>
+                <textarea id="learning-goals" name="learning-goals" rows="4" placeholder="What do you hope to achieve with photography?"></textarea>
+
+                <button type="submit">Get Personalized Tips</button>
+            </form>
+
+            <p>Practice regularly and study other photographers' work. Join online communities, take courses, and most importantly, shoot consistently. Review your images critically to understand what works and what doesn't. Experiment with different subjects, lighting conditions, and techniques to develop your unique style.</p>
+
+            <table>
+                <tr>
+                    <th>Skill Level</th>
+                    <th>Focus Areas</th>
+                    <th>Recommended Practice</th>
+                </tr>
+                <tr>
+                    <td>Beginner</td>
+                    <td>Basic exposure, Composition rules</td>
+                    <td>Daily photo challenges</td>
+                </tr>
+                <tr>
+                    <td>Intermediate</td>
+                    <td>Manual mode, Advanced composition</td>
+                    <td>Theme-based projects</td>
+                </tr>
+                <tr>
+                    <td>Advanced</td>
+                    <td>Lighting control, Personal style</td>
+                    <td>Portfolio development</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="why">
+            <h2>Why Practice Photography?</h2>
+
+            <p>Photography offers numerous benefits beyond simply taking pictures. It encourages you to observe the world more carefully, noticing details, light, and moments you might otherwise miss. This heightened awareness enriches daily life and cultivates mindfulness. Photography becomes a meditative practice, helping you stay present and engaged.</p>
+
+            <p>Creative expression through photography provides emotional outlet and personal fulfillment. Whether documenting family memories, exploring artistic visions, or telling important stories, photography gives you a powerful voice. It's a universal language that transcends cultural and linguistic barriers, allowing you to communicate ideas and emotions visually.</p>
+
+            <figure>
+                <img src="images/creative-workspace.jpg" alt="Photographer's creative workspace">
+                <figcaption>Photography as creative expression and artistic pursuit</figcaption>
+            </figure>
+            <p class="ai-prompt">AI Prompt: "Photorealistic image of photographer's creative workspace with printed photos, camera equipment, laptop showing photo editing software, inspiration mood board"</p>
+
+            <p>Photography preserves memories and documents history. Family photographs become treasured heirlooms, while photojournalism captures important events for future generations. Your images create a visual legacy, telling your story and the stories of those around you. In an increasingly digital world, photographs remain our most powerful memory keepers.</p>
+
+            <table>
+                <tr>
+                    <th>Benefit</th>
+                    <th>Impact</th>
+                </tr>
+                <tr>
+                    <td>Creative Expression</td>
+                    <td>Develops artistic vision and unique perspective</td>
+                </tr>
+                <tr>
+                    <td>Mindfulness</td>
+                    <td>Increases awareness and appreciation of surroundings</td>
+                </tr>
+                <tr>
+                    <td>Memory Preservation</td>
+                    <td>Creates lasting records of important moments</td>
+                </tr>
+                <tr>
+                    <td>Technical Skills</td>
+                    <td>Builds understanding of light, composition, technology</td>
+                </tr>
+                <tr>
+                    <td>Community</td>
+                    <td>Connects with other photographers and creatives</td>
+                </tr>
+                <tr>
+                    <td>Career Opportunities</td>
+                    <td>Opens doors to professional photography paths</td>
+                </tr>
+            </table>
+
+            <p>For many, photography evolves from hobby to passion to profession. Even if you never pursue it commercially, the skills you develop - patience, observation, technical knowledge, creativity - transfer to other areas of life. Photography challenges you to see differently, think creatively, and continually learn and grow.</p>
+        </section>
+
+        <section id="ai-prompts">
+            <h2>AI Prompts Used - Learning Process</h2>
+
+            <p><strong>AI Model Used:</strong> Claude by Anthropic</p>
+            <p><strong>Learning Context:</strong> I am currently at CSS progress 173/1156 (completed Basic CSS only). I have not learned JavaScript yet in my course. The assignment requires JavaScript for the show/hide sections functionality, so I needed AI assistance for those parts while handling HTML/CSS structure myself.</p>
+
+            <h3>Initial Planning:</h3>
+            <p class="ai-prompt"><strong>My Question:</strong> "I have an assignment requiring sections that hide/show like different pages. I know basic HTML and CSS but haven't learned JavaScript yet. The assignment says I can use AI. Can you explain what approach I should take - do I need JavaScript for this, or can it be done with CSS only?"</p>
+            <p><em>AI explained that while some hide/show can be done with CSS :target selector, JavaScript provides better control for this use case. Since I haven't learned JS yet, AI offered to help with that specific part.</em></p>
+
+            <h3>Navigation and Styling:</h3>
+            <p class="ai-prompt"><strong>My Question:</strong> "I want my navigation to be centered and the links to have consistent spacing. Should I use padding or margin between links? And how do I center the entire nav bar?"</p>
+            <p><em>AI explained using text-align: center on the nav element for centering, and using margin for spacing between links. Suggested inline-block display for nav links to control spacing better.</em></p>
+
+            <h3>JavaScript for Show/Hide:</h3>
+            <p class="ai-prompt"><strong>My Question:</strong> "I need JavaScript to hide all sections except the one clicked. Since I haven't learned JavaScript in my course yet, can you help me understand what this code needs to do and provide a simple function I can use?"</p>
+            <p><em>AI provided a showSection() function explaining: it loops through all sections removing the 'active' class, then adds 'active' only to the selected section. The CSS handles actual hiding via display:none.</em></p>
+
+            <h3>CSS Classes for Visibility:</h3>
+            <p class="ai-prompt"><strong>My Question:</strong> "If JavaScript adds/removes a class called 'active', how do I write the CSS so sections are hidden by default but shown when they have that class?"</p>
+            <p><em>AI explained: set 'section { display: none; }' for default hidden state, then 'section.active { display: block; }' to show active sections. This was within my CSS knowledge but I needed confirmation of the approach.</em></p>
+
+            <h3>Section Animations:</h3>
+            <p class="ai-prompt"><strong>My Question:</strong> "I want smooth transitions when sections appear/disappear instead of instant show/hide. I learned basic transitions for hover effects, but how do I apply that to elements appearing on the page?"</p>
+            <p><em>AI explained using CSS animations with @keyframes for fadeIn effect, and how to apply animation properties to sections when they become active. Showed how to combine opacity and transform for smooth appearance.</em></p>
+
+            <h3>Box Shadow for Depth:</h3>
+            <p class="ai-prompt"><strong>My Question:</strong> "I want my content boxes to look like they're floating above the background. I've heard of box-shadow but don't understand the parameters. How do I create that effect?"</p>
+            <p><em>AI explained box-shadow syntax: horizontal offset, vertical offset, blur radius, spread radius, and color. Suggested starting with '0 8px 16px rgba(0,0,0,0.3)' for a lifted effect and experimenting with values.</em></p>
+
+            <h3>Layout Organization:</h3>
+            <p class="ai-prompt"><strong>My Question:</strong> "My sections have lots of content (paragraphs, tables, forms, images). How do I organize the spacing between these elements so it looks clean and professional, not cluttered?"</p>
+            <p><em>AI suggested using consistent margin-bottom values for elements, grouping related content closer together (CRAP proximity), and using larger spacing between major sections. Recommended creating a spacing system (like 1rem, 1.5rem, 2rem).</em></p>
+
+            <h3>CRAP Principles:</h3>
+            <p class="ai-prompt"><strong>My Question:</strong> "The assignment mentions CRAP principles. I understand it stands for Contrast, Repetition, Alignment, Proximity but how do I apply these in my CSS?"</p>
+            <p><em>AI explained: Contrast through color choices, Repetition by using consistent spacing/colors, Alignment with text-align and flexbox basics, Proximity by grouping related elements with margins. Suggested focusing on consistent padding/margins throughout.</em></p>
+
+            <h3>Image Handling:</h3>
+            <p class="ai-prompt"><strong>My Question:</strong> "Some of my images are landscape and some are portrait orientation. How do I make them all look consistent in the layout without manually cropping each one?"</p>
+            <p><em>AI advised using max-width: 100% and height: auto maintains aspect ratio, and suggested using consistent styling (border-radius, box-shadow) to create visual unity even with different dimensions. Mentioned that figures naturally help group images with captions.</em></p>
+
+            <h3>Default Section Display:</h3>
+            <p class="ai-prompt"><strong>My Question:</strong> "The 'What' section needs to show first when page loads. Do I add the 'active' class in HTML or use JavaScript?"</p>
+            <p><em>AI explained two options: add class directly in HTML (simpler), or use JavaScript DOMContentLoaded event. Since I'm using JS anyway, suggested the JavaScript approach for consistency.</em></p>
+
+            <h3>Color Scheme Selection:</h3>
+            <p class="ai-prompt"><strong>My Question:</strong> "Assignment says color scheme must be different from main site. My main site uses [other colors]. How do I choose colors that work well together? I picked purple but what color text works with purple backgrounds?"</p>
+            <p><em>AI suggested using light text (#f0f0f0) on dark/purple backgrounds for readability, and dark text (#333) on white content boxes. Mentioned checking contrast ratios for accessibility.</em></p>
+
+            <p><strong>Note:</strong> All images used in this website are from Unsplash.com under the Unsplash License (free, open-source photography). These are real photographs, not AI-generated images.</p>
+
+            <h3>Debugging Help:</h3>
+            <p class="ai-prompt"><strong>My Question:</strong> "When I click navigation links, nothing happens. How do I check if the JavaScript is working? I don't know how to debug JavaScript."</p>
+            <p><em>AI explained: open browser Developer Tools (F12), check Console for errors, use console.log() to test if function is being called, verify onclick attributes are correctly written in HTML.</em></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Designed by <a href="../lcorpdesigns.com/">L Corp Designs</a></p>
+        <div class="validation-links">
+            <a href="https://validator.w3.org/check?uri=referer" target="_blank">HTML Validation</a>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">CSS Validation</a>
+            <a href="https://wave.webaim.org/report#/https://webpages.charlotte.edu/cli37/itis3135/hobby/" target="_blank">Accessibility Check</a>
+        </div>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show selected section
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.classList.add('active');
+            }
+            
+            // Prevent default anchor behavior
+            return false;
+        }
+
+        // Show 'what' section by default on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            showSection('what');
+        });
+    </script>
+</body>
+</html>
