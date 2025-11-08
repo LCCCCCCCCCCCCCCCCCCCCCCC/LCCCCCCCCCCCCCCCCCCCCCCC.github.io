@@ -85,3 +85,39 @@ main {
         font-size: 1.5em;
     }
 }
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: white;
+}
+
+thead {
+    background-color: darkblue;
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f0f0f0;
+}
+
+th {
+    font-weight: bold;
+}
+
+td:last-child {
+    font-style: italic;
+    color: #666;
+}
