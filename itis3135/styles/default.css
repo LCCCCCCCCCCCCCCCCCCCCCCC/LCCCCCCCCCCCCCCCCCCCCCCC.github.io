@@ -33,3 +33,16 @@ figure {
 figcaption {
     font-style: italic;
 }
+
+a:link {
+    color: green;
+}
+
+a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+a:active {
+    color: orange;
+}
