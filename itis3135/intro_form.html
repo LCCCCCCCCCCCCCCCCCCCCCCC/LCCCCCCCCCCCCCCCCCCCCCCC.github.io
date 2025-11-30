@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITIS3135 | Cai Li's | Learning Crab | Introduction Form</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div data-include="components/header.html"></div>
+    <main>
+        <h2 id="formTitle">Introduction Form</h2>
+        
+        <h3 id="formInstruction">Please submit the form below.</h3>
+
+        <form id="introForm">
+            <fieldset>
+                <legend>Personal Information</legend>
+                
+                <label for="firstName">First Name: <span class="required">*</span></label>
+                <input type="text" id="firstName" name="firstName" value="Cai" placeholder="Enter your first name" required>
+
+                <label for="middleName">Middle Name/Initial (optional):</label>
+                <input type="text" id="middleName" name="middleName" value="" placeholder="Enter your middle name or initial">
+
+                <label for="nickname">Nickname/Preferred Name (optional):</label>
+                <input type="text" id="nickname" name="nickname" value="" placeholder="Enter your nickname">
+
+                <label for="lastName">Last Name: <span class="required">*</span></label>
+                <input type="text" id="lastName" name="lastName" value="Li" placeholder="Enter your last name" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Acknowledgment</legend>
+                
+                <label for="acknowledgmentStatement">Acknowledgment Statement: <span class="required">*</span></label>
+                <textarea id="acknowledgmentStatement" name="acknowledgmentStatement" rows="3" placeholder="Enter your acknowledgment statement" required>I, Cai Li, certify that this is my original work and complies with academic integrity standards.</textarea>
+
+                <label for="acknowledgmentDate">Acknowledgment Date: <span class="required">*</span></label>
+                <input type="date" id="acknowledgmentDate" name="acknowledgmentDate" value="2025-11-29" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Mascot & Styling</legend>
+                
+                <label for="mascotAdjective">Mascot Adjective: <span class="required">*</span></label>
+                <input type="text" id="mascotAdjective" name="mascotAdjective" value="Learning" placeholder="e.g., Mighty, Flying, Wise" required>
+
+                <label for="mascotAnimal">Mascot Animal: <span class="required">*</span></label>
+                <input type="text" id="mascotAnimal" name="mascotAnimal" value="Crab" placeholder="e.g., Eagle, Lion, Dragon" required>
+
+                <label for="divider">Divider Symbol: <span class="required">*</span></label>
+                <input type="text" id="divider" name="divider" value="|" placeholder="e.g., ~, |, ♥️" maxlength="3" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Picture</legend>
+                
+                <label for="pictureURL">Picture URL: <span class="required">*</span></label>
+                <input type="url" id="pictureURL" name="pictureURL" value="https://i.imgur.com/HxIia2t.jpeg" placeholder="https://example.com/image.jpg" required>
+
+                <label for="pictureCaption">Picture Caption: <span class="required">*</span></label>
+                <input type="text" id="pictureCaption" name="pictureCaption" value="Cai Li | Learning Crab" placeholder="Enter your picture caption" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Personal Statement</legend>
+                
+                <label for="personalStatement">Personal Statement: <span class="required">*</span></label>
+                <textarea id="personalStatement" name="personalStatement" rows="3" placeholder="Tell us about yourself" required>Student interested in technology and learning new skills.</textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Background Information</legend>
+                
+                <label for="personalBackground">Personal Background: <span class="required">*</span></label>
+                <textarea id="personalBackground" name="personalBackground" rows="2" placeholder="Your personal background" required>Student interested in technology and learning new skills.</textarea>
+
+                <label for="professionalBackground">Professional Background: <span class="required">*</span></label>
+                <textarea id="professionalBackground" name="professionalBackground" rows="2" placeholder="Your professional experience" required>Currently focused on academic studies.</textarea>
+
+                <label for="academicBackground">Academic Background: <span class="required">*</span></label>
+                <textarea id="academicBackground" name="academicBackground" rows="2" placeholder="Your academic history" required>Cybersecurity major at UNC Charlotte.</textarea>
+
+                <label for="subjectBackground">Background in this Subject: <span class="required">*</span></label>
+                <textarea id="subjectBackground" name="subjectBackground" rows="2" placeholder="Your background in web development" required>New to web development, required course for my program.</textarea>
+
+                <label for="computerPlatform">Primary Computer Platform: <span class="required">*</span></label>
+                <input type="text" id="computerPlatform" name="computerPlatform" value="Windows laptop" placeholder="e.g., MacBook Pro, Windows Desktop" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Courses</legend>
+                <div id="coursesContainer">
+                    <div class="course-entry">
+                        <label>Course Department: <span class="required">*</span></label>
+                        <input type="text" class="courseDept" value="ITIS" placeholder="e.g., ITIS" required>
+
+                        <label>Course Number: <span class="required">*</span></label>
+                        <input type="text" class="courseNumber" value="3135" placeholder="e.g., 3135" required>
+
+                        <label>Course Name: <span class="required">*</span></label>
+                        <input type="text" class="courseName" value="Web App Design and Development" placeholder="e.g., Web Development" required>
+
+                        <label>Reason for Taking: <span class="required">*</span></label>
+                        <input type="text" class="courseReason" value="Required course." placeholder="e.g., Required for major" required>
+                    </div>
+
+                    <div class="course-entry">
+                        <label>Course Department: <span class="required">*</span></label>
+                        <input type="text" class="courseDept" value="ITSC" placeholder="e.g., ITIS" required>
+
+                        <label>Course Number: <span class="required">*</span></label>
+                        <input type="text" class="courseNumber" value="3160" placeholder="e.g., 3135" required>
+
+                        <label>Course Name: <span class="required">*</span></label>
+                        <input type="text" class="courseName" value="Database Design and Implementation" placeholder="e.g., Web Development" required>
+
+                        <label>Reason for Taking: <span class="required">*</span></label>
+                        <input type="text" class="courseReason" value="Required course." placeholder="e.g., Required for major" required>
+                    </div>
+
+                    <div class="course-entry">
+                        <label>Course Department: <span class="required">*</span></label>
+                        <input type="text" class="courseDept" value="ITIS" placeholder="e.g., ITIS" required>
+
+                        <label>Course Number: <span class="required">*</span></label>
+                        <input type="text" class="courseNumber" value="3200" placeholder="e.g., 3135" required>
+
+                        <label>Course Name: <span class="required">*</span></label>
+                        <input type="text" class="courseName" value="Network Security" placeholder="e.g., Web Development" required>
+
+                        <label>Reason for Taking: <span class="required">*</span></label>
+                        <input type="text" class="courseReason" value="Required course." placeholder="e.g., Required for major" required>
+                    </div>
+
+                    <div class="course-entry">
+                        <label>Course Department: <span class="required">*</span></label>
+                        <input type="text" class="courseDept" value="MATH" placeholder="e.g., ITIS" required>
+
+                        <label>Course Number: <span class="required">*</span></label>
+                        <input type="text" class="courseNumber" value="1241" placeholder="e.g., 3135" required>
+
+                        <label>Course Name: <span class="required">*</span></label>
+                        <input type="text" class="courseName" value="Calculus I" placeholder="e.g., Web Development" required>
+
+                        <label>Reason for Taking: <span class="required">*</span></label>
+                        <input type="text" class="courseReason" value="Required course." placeholder="e.g., Required for major" required>
+                    </div>
+                </div>
+                <button type="button" id="addCourseBtn">Add Another Course</button>
+            </fieldset>
+
+            <fieldset>
+                <legend>Quote</legend>
+                
+                <label for="quote">Quote: <span class="required">*</span></label>
+                <textarea id="quote" name="quote" rows="3" placeholder="Enter your favorite quote" required>If the sun is gone, we have the moon. If the moon goes out, we have the stars. And if the stars lose their light, then we are the only light.</textarea>
+
+                <label for="quoteAuthor">Quote Author: <span class="required">*</span></label>
+                <input type="text" id="quoteAuthor" name="quoteAuthor" value="Nameless Slay Dragon" placeholder="Author name" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Information (Optional)</legend>
+                
+                <label for="funnyThing">Funny/Interesting Item to Remember You By:</label>
+                <textarea id="funnyThing" name="funnyThing" rows="2" placeholder="Something fun or interesting about you">I hate summer.</textarea>
+
+                <label for="shareItem">Something You'd Like to Share:</label>
+                <textarea id="shareItem" name="shareItem" rows="2" placeholder="Anything else you'd like to share">Looking forward to completing this course requirement successfully.</textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Links (5 Required)</legend>
+                
+                <label for="link1Name">Link 1 Name: <span class="required">*</span></label>
+                <input type="text" id="link1Name" name="link1Name" value="CLT Web" placeholder="e.g., LinkedIn" required>
+                <label for="link1URL">Link 1 URL: <span class="required">*</span></label>
+                <input type="url" id="link1URL" name="link1URL" value="https://lccccccccccccccccccccccc.github.io/" placeholder="https://..." required>
+
+                <label for="link2Name">Link 2 Name: <span class="required">*</span></label>
+                <input type="text" id="link2Name" name="link2Name" value="GitHub" placeholder="e.g., GitHub" required>
+                <label for="link2URL">Link 2 URL: <span class="required">*</span></label>
+                <input type="url" id="link2URL" name="link2URL" value="https://github.com/LCCCCCCCCCCCCCCCCCCCCCCC" placeholder="https://..." required>
+
+                <label for="link3Name">Link 3 Name: <span class="required">*</span></label>
+                <input type="text" id="link3Name" name="link3Name" value="GitHub.io" placeholder="e.g., Portfolio" required>
+                <label for="link3URL">Link 3 URL: <span class="required">*</span></label>
+                <input type="url" id="link3URL" name="link3URL" value="https://github.com/LCCCCCCCCCCCCCCCCCCCCCCC/LCCCCCCCCCCCCCCCCCCCCCCC.github.io" placeholder="https://..." required>
+
+                <label for="link4Name">Link 4 Name: <span class="required">*</span></label>
+                <input type="text" id="link4Name" name="link4Name" value="Course.io" placeholder="e.g., Twitter" required>
+                <label for="link4URL">Link 4 URL: <span class="required">*</span></label>
+                <input type="url" id="link4URL" name="link4URL" value="https://lccccccccccccccccccccccc.github.io/itis3135/" placeholder="https://..." required>
+
+                <label for="link5Name">Link 5 Name: <span class="required">*</span></label>
+                <input type="text" id="link5Name" name="link5Name" value="freeCodeCamp" placeholder="e.g., Email" required>
+                <label for="link5URL">Link 5 URL: <span class="required">*</span></label>
+                <input type="url" id="link5URL" name="link5URL" value="https://www.freecodecamp.org/lcccc" placeholder="https://..." required>
+
+                <label for="link6Name">Link 6 Name (optional):</label>
+                <input type="text" id="link6Name" name="link6Name" value="Codecademy" placeholder="e.g., Blog">
+                <label for="link6URL">Link 6 URL (optional):</label>
+                <input type="url" id="link6URL" name="link6URL" value="https://www.codecademy.com/profiles/core1368374369" placeholder="https://...">
+
+                <label for="link7Name">Link 7 Name (optional):</label>
+                <input type="text" id="link7Name" name="link7Name" value="LinkedIn" placeholder="e.g., YouTube">
+                <label for="link7URL">Link 7 URL (optional):</label>
+                <input type="url" id="link7URL" name="link7URL" value="https://www.linkedin.com/in/%E8%B4%A2-%E6%9D%8E-402498267/" placeholder="https://...">
+            </fieldset>
+
+            <div class="button-group">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+                <button type="button" id="clearBtn">Clear</button>
+            </div>
+        </form>
+
+        <div id="result" style="display: none;"></div>
+    </main>
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="scripts/introduction.js"></script>
+</body>
+</html>

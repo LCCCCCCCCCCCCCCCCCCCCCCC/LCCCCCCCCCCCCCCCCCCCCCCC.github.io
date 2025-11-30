@@ -32,6 +32,8 @@ figure {
 
 figcaption {
     font-style: italic;
+    margin-top: 10px;
+    color: #666;
 }
 
 a:link {
@@ -121,3 +123,185 @@ td:last-child {
     font-style: italic;
     color: #666;
 }
+
+/* Form Styles for intro_form.html */
+
+form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+fieldset {
+    border: 2px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 0 10px;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #444;
+}
+
+input[type="text"],
+input[type="url"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+.required {
+    color: red;
+}
+
+.button-group {
+    text-align: center;
+    margin: 30px 0;
+}
+
+button {
+    padding: 12px 30px;
+    margin: 0 10px;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+button[type="reset"] {
+    background-color: #ff9800;
+    color: white;
+}
+
+button[type="reset"]:hover {
+    background-color: #e68900;
+}
+
+button[type="button"],
+#clearBtn {
+    background-color: #f44336;
+    color: white;
+}
+
+button[type="button"]:hover,
+#clearBtn:hover {
+    background-color: #da190b;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#addCourseBtn {
+    background-color: #2196F3;
+    margin-top: 15px;
+}
+
+#addCourseBtn:hover {
+    background-color: #0b7dda;
+}
+
+.deleteCourseBtn {
+    background-color: #f44336;
+    color: white;
+    padding: 8px 15px;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+.deleteCourseBtn:hover {
+    background-color: #da190b;
+}
+
+.course-entry {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.course-entry hr {
+    margin: 15px 0;
+}
+
+/* Result display styles */
+#result blockquote {
+    font-style: italic;
+    border-left: 4px solid #ccc;
+    padding-left: 20px;
+    margin: 20px 0;
+}
+
+#result figure {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#result figcaption {
+    font-style: italic;
+    margin-top: 10px;
+    color: #666;
+}
+
+#resetLink {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2196F3;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#resetLink:hover {
+    background-color: #0b7dda;
+}
+
+blockquote {
+  font-style: italic;
+  border-left: 4px solid #ccc;
+  padding-left: 20px;
+  margin: 20px 0;
+}
+
