@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cai Li's Learning Crab | ITIS3135 | Project</title>
+    <link rel="stylesheet" href="../styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div data-include="../components/header.html"></div>
+    <main>
+        <h2>Project Design Document</h2>
+        
+        <section>
+            <h3>Project Overview</h3>
+            <p><strong>Project Name:</strong> UNCC Gaming Club Website</p>
+            
+            <h4>Application Description and Purpose</h4>
+            <p>This website is for the UNCC Gaming Club. It helps students find and join gaming events on campus. The site shows information about the club, upcoming game tournaments, and how to become a member.</p>
+            
+            <h4>Intended Users</h4>
+            <ul>
+                <li>UNCC students who like video games</li>
+                <li>Current club members</li>
+                <li>Students looking for gaming communities</li>
+                <li>Club officers who manage events</li>
+            </ul>
+            
+            <h4>Website Content Overview</h4>
+            <ul>
+                <li>Information about the gaming club</li>
+                <li>List of upcoming gaming events and tournaments</li>
+                <li>Game recommendations and reviews</li>
+                <li>Photo gallery from past events</li>
+                <li>Membership registration form</li>
+                <li>Contact information and social media links</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Client Information</h3>
+            <ul>
+                <li><strong>Client Name:</strong> Jordan Martinez</li>
+                <li><strong>Organization:</strong> UNCC Gaming Club</li>
+                <li><strong>Email:</strong> uncc.gaming.club@example.com</li>
+                <li><strong>Phone:</strong> [private]</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Wireframe</h3>
+            <p>The wireframe shows the basic layout of the website pages. It will be created using Draw.io and linked here.</p>
+            <figure>
+                <img src="wireframe.svg" alt="Website Wireframe" style="max-width: 100%; border: 1px solid #ccc;">
+                <figcaption>Default page wireframe for UNCC Gaming Club website</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h3>Site Map</h3>
+            <p>The site map shows how all pages connect to each other.</p>
+            <figure>
+                <img src="sitemap.svg" alt="Website Site Map" style="max-width: 100%; border: 1px solid #ccc;">
+                <figcaption>Site structure showing navigation between pages</figcaption>
+            </figure>
+            
+            <h4>Website Structure</h4>
+            <p>The website has 5 main pages:</p>
+            <ul>
+                <li>Home (index.html)</li>
+                <li>About Us</li>
+                <li>Events</li>
+                <li>Game Library</li>
+                <li>Join Us</li>
+            </ul>
+            <p>All pages have a navigation bar at the top and a footer with validation links at the bottom.</p>
+        </section>
+
+        <section>
+            <h3>Page Design</h3>
+
+            <article>
+                <h4>Page 1: Home (index.html)</h4>
+                <ul>
+                    <li><strong>Purpose:</strong> Welcome page that shows what the club is about</li>
+                    <li><strong>Audience:</strong> All visitors, especially new students</li>
+                    <li><strong>Content:</strong>
+                        <ul>
+                            <li>Welcome message</li>
+                            <li>Latest news and announcements</li>
+                            <li>Image slider showing club activities</li>
+                            <li>Quick links to events and membership</li>
+                        </ul>
+                    </li>
+                    <li><strong>User Input:</strong> No data entry on this page</li>
+                    <li><strong>Interactive Elements:</strong>
+                        <ul>
+                            <li>Image slider (jQuery plugin)</li>
+                            <li>Navigation menu</li>
+                            <li>Links to other pages</li>
+                        </ul>
+                    </li>
+                    <li><strong>Actions:</strong> Clicking links takes users to other pages. Image slider changes automatically.</li>
+                </ul>
+            </article>
+
+            <article>
+                <h4>Page 2: About Us</h4>
+                <ul>
+                    <li><strong>Purpose:</strong> Tell visitors about the club history and members</li>
+                    <li><strong>Audience:</strong> New students and potential members</li>
+                    <li><strong>Content:</strong>
+                        <ul>
+                            <li>Club history and mission</li>
+                            <li>Officer profiles with photos</li>
+                            <li>Club achievements</li>
+                            <li>Meeting schedule</li>
+                        </ul>
+                    </li>
+                    <li><strong>User Input:</strong> No data entry</li>
+                    <li><strong>Interactive Elements:</strong>
+                        <ul>
+                            <li>Expandable officer profiles (click to show more info)</li>
+                            <li>Photo gallery</li>
+                        </ul>
+                    </li>
+                    <li><strong>Actions:</strong> Clicking officer cards shows more details using JavaScript</li>
+                </ul>
+            </article>
+
+            <article>
+                <h4>Page 3: Events</h4>
+                <ul>
+                    <li><strong>Purpose:</strong> Show upcoming gaming events and tournaments</li>
+                    <li><strong>Audience:</strong> Current members and interested students</li>
+                    <li><strong>Content:</strong>
+                        <ul>
+                            <li>Event calendar</li>
+                            <li>Event details (date, time, location, game)</li>
+                            <li>Past event photos</li>
+                            <li>Registration button</li>
+                        </ul>
+                    </li>
+                    <li><strong>User Input:</strong> Yes, registration form with:
+                        <ul>
+                            <li>Name (required, text validation)</li>
+                            <li>Email (required, email format validation)</li>
+                            <li>Student ID (required, number validation)</li>
+                            <li>Game preference (dropdown)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Validations:</strong>
+                        <ul>
+                            <li>All fields must be filled</li>
+                            <li>Email must have @ symbol</li>
+                            <li>Student ID must be numbers only</li>
+                        </ul>
+                    </li>
+                    <li><strong>Interactive Elements:</strong>
+                        <ul>
+                            <li>Interactive calendar (jQuery-UI datepicker)</li>
+                            <li>Photo gallery with lightbox</li>
+                            <li>Registration form with validation</li>
+                        </ul>
+                    </li>
+                    <li><strong>Actions:</strong> Form validates input before submission. Calendar shows event details when clicking dates.</li>
+                </ul>
+            </article>
+
+            <article>
+                <h4>Page 4: Game Library</h4>
+                <ul>
+                    <li><strong>Purpose:</strong> Show games the club plays and recommend new games</li>
+                    <li><strong>Audience:</strong> Members looking for new games to play</li>
+                    <li><strong>Content:</strong>
+                        <ul>
+                            <li>List of games with images</li>
+                            <li>Game ratings and reviews</li>
+                            <li>Game categories (Action, RPG, Strategy, etc.)</li>
+                            <li>Platform information (PC, Console, Mobile)</li>
+                        </ul>
+                    </li>
+                    <li><strong>User Input:</strong> No data entry, but users can interact with filters</li>
+                    <li><strong>Interactive Elements:</strong>
+                        <ul>
+                            <li>Search box to find games</li>
+                            <li>Filter dropdowns (by genre, platform)</li>
+                            <li>Sort buttons (by rating, by name)</li>
+                            <li>Click game card to see details</li>
+                        </ul>
+                    </li>
+                    <li><strong>Actions:</strong>
+                        <ul>
+                            <li>Search filters game list using JavaScript</li>
+                            <li>Dropdown filters update displayed games</li>
+                            <li>Sort buttons reorder the list</li>
+                            <li>AJAX loads game details without page reload</li>
+                        </ul>
+                    </li>
+                </ul>
+            </article>
+
+            <article>
+                <h4>Page 5: Join Us</h4>
+                <ul>
+                    <li><strong>Purpose:</strong> Let students join the club and find contact info</li>
+                    <li><strong>Audience:</strong> Students who want to become members</li>
+                    <li><strong>Content:</strong>
+                        <ul>
+                            <li>Membership benefits</li>
+                            <li>How to join instructions</li>
+                            <li>Application form</li>
+                            <li>Social media links</li>
+                            <li>FAQ section</li>
+                        </ul>
+                    </li>
+                    <li><strong>User Input:</strong> Yes, membership form with:
+                        <ul>
+                            <li>Full name (required)</li>
+                            <li>Email (required, email validation)</li>
+                            <li>Student ID (required, 9 digits)</li>
+                            <li>Major (text field)</li>
+                            <li>Favorite games (checkboxes)</li>
+                            <li>Why join? (text area)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Validations:</strong>
+                        <ul>
+                            <li>Name cannot be empty</li>
+                            <li>Email must be valid format</li>
+                            <li>Student ID must be exactly 9 numbers</li>
+                            <li>At least one game must be selected</li>
+                        </ul>
+                    </li>
+                    <li><strong>Interactive Elements:</strong>
+                        <ul>
+                            <li>Form with JavaScript validation</li>
+                            <li>FAQ accordion (click to expand answers)</li>
+                            <li>Submit button</li>
+                        </ul>
+                    </li>
+                    <li><strong>Actions:</strong>
+                        <ul>
+                            <li>Form validates all fields before submission</li>
+                            <li>Error messages show if validation fails</li>
+                            <li>Success message after submission</li>
+                            <li>FAQ items expand/collapse when clicked</li>
+                        </ul>
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+        <section>
+            <h3>Dynamic Functionality</h3>
+            
+            <h4>1. Image Slider (Home Page)</h4>
+            <p><strong>Description:</strong> Automatic slideshow of club photos that users can also control manually.</p>
+            <p><strong>Technology:</strong> jQuery slider plugin or custom JavaScript</p>
+            <p><strong>Example:</strong> Similar to sliders on <a href="https://www.w3schools.com/howto/howto_js_slideshow.asp" target="_blank">W3Schools Slideshow</a></p>
+            
+            <h4>2. Interactive Calendar (Events Page)</h4>
+            <p><strong>Description:</strong> Calendar that highlights event dates and shows details when clicked.</p>
+            <p><strong>Technology:</strong> jQuery-UI Datepicker widget</p>
+            <p><strong>Example:</strong> Like calendars on <a href="https://jqueryui.com/datepicker/" target="_blank">jQuery UI Datepicker Demo</a></p>
+            
+            <h4>3. Photo Gallery with Lightbox (Events Page)</h4>
+            <p><strong>Description:</strong> Click photos to view them larger in a popup overlay.</p>
+            <p><strong>Technology:</strong> Lightbox jQuery plugin</p>
+            <p><strong>Example:</strong> Similar to <a href="https://lokeshdhakar.com/projects/lightbox2/" target="_blank">Lightbox2</a></p>
+            
+            <h4>4. Form Validation (Events and Join Us Pages)</h4>
+            <p><strong>Description:</strong> Check user input before sending. Show error messages for invalid data.</p>
+            <p><strong>Technology:</strong> Custom JavaScript validation</p>
+            <p><strong>Validations include:</strong></p>
+            <ul>
+                <li>Required fields check</li>
+                <li>Email format validation</li>
+                <li>Number-only validation for Student ID</li>
+                <li>Minimum/maximum length checks</li>
+            </ul>
+            
+            <h4>5. Search and Filter (Game Library Page)</h4>
+            <p><strong>Description:</strong> Real-time search and filtering of game list without page reload.</p>
+            <p><strong>Technology:</strong> JavaScript DOM manipulation</p>
+            <p><strong>Features:</strong></p>
+            <ul>
+                <li>Search box filters as you type</li>
+                <li>Dropdown filters by genre and platform</li>
+                <li>Sort buttons reorder games</li>
+            </ul>
+            
+            <h4>6. AJAX Content Loading (Game Library Page)</h4>
+            <p><strong>Description:</strong> Load game details without refreshing the whole page.</p>
+            <p><strong>Technology:</strong> jQuery AJAX</p>
+            <p><strong>Example:</strong> Click a game card to load its details from a separate file</p>
+            
+            <h4>7. FAQ Accordion (Join Us Page)</h4>
+            <p><strong>Description:</strong> Expandable FAQ items that show/hide answers when clicked.</p>
+            <p><strong>Technology:</strong> jQuery-UI Accordion widget or custom JavaScript</p>
+            <p><strong>Example:</strong> Like <a href="https://jqueryui.com/accordion/" target="_blank">jQuery UI Accordion</a></p>
+            
+            <h4>8. Expandable Officer Cards (About Page)</h4>
+            <p><strong>Description:</strong> Click officer photos to see more information.</p>
+            <p><strong>Technology:</strong> JavaScript toggle function</p>
+            <p><strong>Action:</strong> Cards flip or expand to show bio and contact info</p>
+        </section>
+
+        <section>
+            <h3>Technical Requirements</h3>
+            <ul>
+                <li>Navigation bar on all pages for single-click access</li>
+                <li>Consistent header and footer across all pages</li>
+                <li>Footer includes HTML and CSS validation links</li>
+                <li>Uses JavaScript/jQuery for interactivity</li>
+                <li>Includes at least one jQuery-UI widget</li>
+                <li>Uses other jQuery plugins (slider, lightbox)</li>
+                <li>Implements AJAX functionality</li>
+                <li>Responsive design for mobile and desktop</li>
+            </ul>
+        </section>
+    </main>
+
+    <div data-include="../components/footer.html"></div>
+    <script src="../scripts/HTMLInclude.min.js"></script>
+    <script>
+        includeHTML();
+    </script>
+</body>
+</html>
