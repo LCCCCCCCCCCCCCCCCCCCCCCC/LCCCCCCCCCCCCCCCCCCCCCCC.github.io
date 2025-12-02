@@ -5,9 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cai Li's Learning Crab | ITIS3135 | Events</title>
     <link rel="stylesheet" href="../styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div data-include="../components/header.html"></div>
+    <header>
+        <h1>UNCC Gaming Club</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="events.html">Events</a>
+            <a href="games.html">Game Library</a>
+            <a href="join.html">Join Us</a>
+        </nav>
+    </header>
 
     <main>
         <h2>Upcoming Events</h2>
@@ -90,13 +100,6 @@
                 <p><strong>Every Friday, 6:00 PM - 10:00 PM</strong></p>
                 <p><strong>Location:</strong> Student Union Room 240</p>
                 <p>Casual gaming sessions featuring different games each week. Free snacks provided!</p>
-                
-                <h5>January Schedule:</h5>
-                <ul>
-                    <li>January 17: Fighting Game Night (Smash Bros, Tekken 8, Street Fighter 6)</li>
-                    <li>January 24: Party Games (Mario Party, Jackbox, Among Us)</li>
-                    <li>January 31: FPS Night (Valorant, CS2, Overwatch 2)</li>
-                </ul>
             </article>
 
             <article style="border: 2px solid #333; padding: 15px; margin: 15px 0; border-radius: 8px;">
@@ -107,69 +110,12 @@
             </article>
 
             <article style="border: 2px solid #333; padding: 15px; margin: 15px 0; border-radius: 8px;">
-                <h4>Ranked League of Legends Practice</h4>
-                <p><strong>Tuesdays and Thursdays, 5:00 PM - 8:00 PM</strong></p>
-                <p><strong>Location:</strong> Gaming Lab</p>
-                <p>Organized practice sessions for our competitive LoL teams. Coaching available for newer players.</p>
-            </article>
-
-            <article style="border: 2px solid #333; padding: 15px; margin: 15px 0; border-radius: 8px;">
-                <h4>Super Smash Bros Weekly Tournament</h4>
-                <p><strong>Every Friday, 8:00 PM</strong></p>
-                <p><strong>Location:</strong> Gaming Lab</p>
-                <p>Weekly singles bracket tournament. $5 entry, winner takes pot. All skill levels welcome!</p>
-            </article>
-
-            <article style="border: 2px solid #333; padding: 15px; margin: 15px 0; border-radius: 8px;">
                 <h4>Monthly LAN Party</h4>
                 <p><strong>Last Saturday of Each Month, 2:00 PM - Midnight</strong></p>
                 <p><strong>Location:</strong> Student Union Multipurpose Room</p>
                 <p>Large-scale gaming event with PC gaming, console stations, VR demos, and tournaments. Pizza and prizes provided!</p>
                 <p><strong>Next LAN:</strong> January 25, 2025</p>
             </article>
-
-            <article style="border: 2px solid #333; padding: 15px; margin: 15px 0; border-radius: 8px;">
-                <h4>Charity Gaming Marathon</h4>
-                <p><strong>March 8-9, 2025 (24 hours)</strong></p>
-                <p><strong>Location:</strong> Gaming Lab with live stream</p>
-                <p>24-hour gaming marathon to raise money for Extra Life charity. Stream on our Twitch channel. Donations go to Levine Children's Hospital.</p>
-            </article>
-        </section>
-
-        <section>
-            <h3>Past Events Gallery</h3>
-            <p>Check out photos from our previous events:</p>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0;">
-                <div style="border: 2px solid #333; padding: 10px; text-align: center;">
-                    <p style="height: 150px; background-color: #e0e0e0; display: flex; align-items: center; justify-content: center; margin: 0;">
-                        [Fall 2024 Tournament Photo]
-                    </p>
-                    <p style="margin: 10px 0 0 0;"><em>Fall 2024 Tournament Finals</em></p>
-                </div>
-                
-                <div style="border: 2px solid #333; padding: 10px; text-align: center;">
-                    <p style="height: 150px; background-color: #e0e0e0; display: flex; align-items: center; justify-content: center; margin: 0;">
-                        [Game Night Photo]
-                    </p>
-                    <p style="margin: 10px 0 0 0;"><em>Weekly Game Night Fun</em></p>
-                </div>
-                
-                <div style="border: 2px solid #333; padding: 10px; text-align: center;">
-                    <p style="height: 150px; background-color: #e0e0e0; display: flex; align-items: center; justify-content: center; margin: 0;">
-                        [LAN Party Photo]
-                    </p>
-                    <p style="margin: 10px 0 0 0;"><em>October 2024 LAN Party</em></p>
-                </div>
-                
-                <div style="border: 2px solid #333; padding: 10px; text-align: center;">
-                    <p style="height: 150px; background-color: #e0e0e0; display: flex; align-items: center; justify-content: center; margin: 0;">
-                        [Team Photo]
-                    </p>
-                    <p style="margin: 10px 0 0 0;"><em>Our LoL Championship Team</em></p>
-                </div>
-            </div>
-            <p><em>Note: Actual event photos will be added soon. Follow us on social media for the latest updates!</em></p>
         </section>
 
         <section>
@@ -186,11 +132,14 @@
         </section>
     </main>
 
-    <div data-include="../components/footer.html"></div>
+    <footer>
+        <p>UNCC Gaming Club - Building Community Through Gaming</p>
+        <p>
+            <a href="https://validator.w3.org/check?uri=referer">HTML Validation</a> | 
+            <a href="https://jigsaw.w3.org/css-validator/check/referer">CSS Validation</a>
+        </p>
+    </footer>
     
-    <script src="../scripts/js/HTMLInclude.min.js"></script>
-    <script>
-        includeHTML();
-    </script>
+    <script src="../scripts/gaming-club.js"></script>
 </body>
 </html>
