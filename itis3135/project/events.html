@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cai Li's Learning Crab | ITIS3135 | Events</title>
+    <link rel="stylesheet" href="../styles/default.css">
+</head>
+<body>
+    <div data-include="../components/header.html"></div>
+
+    <main>
+        <h2>Upcoming Events</h2>
+        
+        <section>
+            <h3>Spring 2025 Gaming Tournament</h3>
+            <p><strong>Date:</strong> February 15-16, 2025</p>
+            <p><strong>Location:</strong> Student Union Multipurpose Room</p>
+            <p><strong>Registration Deadline:</strong> February 1, 2025</p>
+            
+            <h4>Tournament Games:</h4>
+            <ul>
+                <li><strong>League of Legends</strong> - 5v5 Teams, Best of 3</li>
+                <li><strong>Valorant</strong> - 5v5 Teams, Best of 3</li>
+                <li><strong>Super Smash Bros Ultimate</strong> - Singles and Doubles Brackets</li>
+                <li><strong>Mario Kart 8</strong> - 4-player Grand Prix Series</li>
+            </ul>
+
+            <h4>Prizes:</h4>
+            <ul>
+                <li>1st Place per game: $200 team prize + trophy</li>
+                <li>2nd Place per game: $100 team prize + medals</li>
+                <li>3rd Place per game: $50 team prize + medals</li>
+                <li>All participants receive gaming swag and free food</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Event Registration</h3>
+            <form id="eventRegistration">
+                <fieldset>
+                    <legend>Register for Spring Tournament</legend>
+                    
+                    <label for="name">Full Name: <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">UNCC Email: <span class="required">*</span></label>
+                    <input type="text" id="email" name="email" required>
+                    
+                    <label for="studentId">Student ID: <span class="required">*</span></label>
+                    <input type="text" id="studentId" name="studentId" pattern="[0-9]{9}" required>
+                    <small>Must be 9 digits</small>
+                    
+                    <label for="gameChoice">Game Selection: <span class="required">*</span></label>
+                    <select id="gameChoice" name="gameChoice" required>
+                        <option value="">-- Select a Game --</option>
+                        <option value="lol">League of Legends</option>
+                        <option value="valorant">Valorant</option>
+                        <option value="smash">Super Smash Bros Ultimate</option>
+                        <option value="mariokart">Mario Kart 8</option>
+                    </select>
+                    
+                    <label for="teamName">Team Name (if applicable):</label>
+                    <input type="text" id="teamName" name="teamName">
+                    
+                    <label for="skillLevel">Skill Level:</label>
+                    <select id="skillLevel" name="skillLevel">
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                        <option value="competitive">Competitive</option>
+                    </select>
+                    
+                    <label for="comments">Additional Comments:</label>
+                    <textarea id="comments" name="comments" rows="4"></textarea>
+                    
+                    <div class="button-group">
+                        <button type="submit">Register</button>
+                        <button type="reset">Clear Form</button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+
+        <section>
+            <h3>Event Calendar - Spring 2025</h3>
+            
+            <article style="border: 2px solid #333; padding: 15px; margin: 15px 0; border-radius: 8px;">
+                <h4>Weekly Game Nights</h4>
+                <p><strong>Every Friday, 6:00 PM - 10:00 PM</strong></p>
+                <p><strong>Location:</strong> Student Union Room 240</p>
+                <p>Casual gaming sessions featuring different games each week. Free snacks provided!</p>
+                
+                <h5>January Schedule:</h5>
+                <ul>
+                    <li>January 17: Fighting Game Night (Smash Bros, Tekken 8, Street Fighter 6)</li>
+                    <li>January 24: Party Games (Mario Party, Jackbox, Among Us)</li>
+                    <li>January 31: FPS Night (Valorant, CS2, Overwatch 2)</li>
+                </ul>
+            </article>
+
+            <article style="border: 2px solid #333; padding: 15px; margin: 15px 0; border-radius: 8px;">
+                <h4>Regular Meetings</h4>
+                <p><strong>Every Wednesday, 7:00 PM - 8:30 PM</strong></p>
+                <p><strong>Location:</strong> Student Union Room 240</p>
+                <p>Club business, announcements, and planning sessions. Open to all members and those interested in joining.</p>
+            </article>
+
+            <article style="border: 2px solid #333; padding: 15px; margin: 15px 0; border-radius: 8px;">
+                <h4>Ranked League of Legends Practice</h4>
+                <p><strong>Tuesdays and Thursdays, 5:00 PM - 8:00 PM</strong></p>
+                <p><strong>Location:</strong> Gaming Lab</p>
+                <p>Organized practice sessions for our competitive LoL teams. Coaching available for newer players.</p>
+            </article>
+
+            <article style="border: 2px solid #333; padding: 15px; margin: 15px 0; border-radius: 8px;">
+                <h4>Super Smash Bros Weekly Tournament</h4>
+                <p><strong>Every Friday, 8:00 PM</strong></p>
+                <p><strong>Location:</strong> Gaming Lab</p>
+                <p>Weekly singles bracket tournament. $5 entry, winner takes pot. All skill levels welcome!</p>
+            </article>
+
+            <article style="border: 2px solid #333; padding: 15px; margin: 15px 0; border-radius: 8px;">
+                <h4>Monthly LAN Party</h4>
+                <p><strong>Last Saturday of Each Month, 2:00 PM - Midnight</strong></p>
+                <p><strong>Location:</strong> Student Union Multipurpose Room</p>
+                <p>Large-scale gaming event with PC gaming, console stations, VR demos, and tournaments. Pizza and prizes provided!</p>
+                <p><strong>Next LAN:</strong> January 25, 2025</p>
+            </article>
+
+            <article style="border: 2px solid #333; padding: 15px; margin: 15px 0; border-radius: 8px;">
+                <h4>Charity Gaming Marathon</h4>
+                <p><strong>March 8-9, 2025 (24 hours)</strong></p>
+                <p><strong>Location:</strong> Gaming Lab with live stream</p>
+                <p>24-hour gaming marathon to raise money for Extra Life charity. Stream on our Twitch channel. Donations go to Levine Children's Hospital.</p>
+            </article>
+        </section>
+
+        <section>
+            <h3>Past Events Gallery</h3>
+            <p>Check out photos from our previous events:</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0;">
+                <div style="border: 2px solid #333; padding: 10px; text-align: center;">
+                    <p style="height: 150px; background-color: #e0e0e0; display: flex; align-items: center; justify-content: center; margin: 0;">
+                        [Fall 2024 Tournament Photo]
+                    </p>
+                    <p style="margin: 10px 0 0 0;"><em>Fall 2024 Tournament Finals</em></p>
+                </div>
+                
+                <div style="border: 2px solid #333; padding: 10px; text-align: center;">
+                    <p style="height: 150px; background-color: #e0e0e0; display: flex; align-items: center; justify-content: center; margin: 0;">
+                        [Game Night Photo]
+                    </p>
+                    <p style="margin: 10px 0 0 0;"><em>Weekly Game Night Fun</em></p>
+                </div>
+                
+                <div style="border: 2px solid #333; padding: 10px; text-align: center;">
+                    <p style="height: 150px; background-color: #e0e0e0; display: flex; align-items: center; justify-content: center; margin: 0;">
+                        [LAN Party Photo]
+                    </p>
+                    <p style="margin: 10px 0 0 0;"><em>October 2024 LAN Party</em></p>
+                </div>
+                
+                <div style="border: 2px solid #333; padding: 10px; text-align: center;">
+                    <p style="height: 150px; background-color: #e0e0e0; display: flex; align-items: center; justify-content: center; margin: 0;">
+                        [Team Photo]
+                    </p>
+                    <p style="margin: 10px 0 0 0;"><em>Our LoL Championship Team</em></p>
+                </div>
+            </div>
+            <p><em>Note: Actual event photos will be added soon. Follow us on social media for the latest updates!</em></p>
+        </section>
+
+        <section>
+            <h3>Event Rules and Guidelines</h3>
+            <ul>
+                <li>All participants must be current UNCC students with valid student ID</li>
+                <li>Respectful behavior is required - harassment or toxicity will not be tolerated</li>
+                <li>Players must arrive 15 minutes before scheduled match times</li>
+                <li>Equipment tampering or cheating results in immediate disqualification</li>
+                <li>Tournament organizers' decisions are final</li>
+                <li>Food and drinks allowed, but please clean up after yourself</li>
+                <li>Have fun and make friends!</li>
+            </ul>
+        </section>
+    </main>
+
+    <div data-include="../components/footer.html"></div>
+    
+    <script src="../scripts/js/HTMLInclude.min.js"></script>
+    <script>
+        includeHTML();
+    </script>
+</body>
+</html>
