@@ -150,5 +150,28 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('header nav');
+    
+    if (hamburger && nav) {
+        hamburger.addEventListener('click', function() {
+            nav.classList.toggle('active');
+        });
+    }
+
+    const scrollBtn = document.getElementById('scrollToTop');
+    
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            scrollBtn.style.display = 'block';
+        } else {
+            scrollBtn.style.display = 'none';
+        }
+    });
+    
+    scrollBtn.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
     
 });

@@ -92,7 +92,6 @@ main {
     }
 }
 
-/* Table Styles */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -127,8 +126,6 @@ td:last-child {
     font-style: italic;
     color: #666;
 }
-
-/* Form Styles for intro_form.html */
 
 form {
     max-width: 800px;
@@ -269,7 +266,6 @@ button:active {
     margin: 15px 0;
 }
 
-/* Result display styles */
 #result blockquote {
     font-style: italic;
     border-left: 4px solid #ccc;
@@ -309,3 +305,64 @@ blockquote {
   margin: 20px 0;
 }
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    margin: 3px 0;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    header nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    header nav.active {
+        display: flex;
+    }
+    
+    header nav a {
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+#scrollToTop {
+    display: none;
+    position: fixed;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    width: 55px;
+    height: 55px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1000;
+    line-height: 55px;
+    text-align: center;
+    padding: 0;
+}
+
+#scrollToTop:hover {
+    background: #555;
+}
