@@ -1,9 +1,13 @@
-/* CSS file for ITIS3135 */
+/* CSS file for ITIS3135 Gaming Club Project
+   Author: Cai Li
+   ITIS 3135 Web Development */
 
+/* Basic page styling */
 body {
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     background-color: lightblue;
     color: #2a2a2a;
+    line-height: 1.6;
 }
 
 h1 {
@@ -12,36 +16,20 @@ h1 {
 
 h2 {
     color: darkblue;
+    margin-top: 30px;
 }
 
+/* Links - changed to darker green for better contrast (WCAG compliance) */
 a {
-    color: green;
-}
-
-nav a {
-    margin-right: 20px;
-}
-
-footer {
-    margin-top: 50px;
-}
-
-figure {
-    text-align: center;
-}
-
-figcaption {
-    font-style: italic;
-    margin-top: 10px;
-    color: #666;
+    color: #004d00;
 }
 
 a:link {
-    color: green;
+    color: #004d00;
 }
 
 a:visited {
-    color: green;
+    color: #003300;
 }
 
 a:hover {
@@ -53,12 +41,46 @@ a:active {
     color: orange;
 }
 
+/* Navigation */
+nav a {
+    margin-right: 20px;
+}
+
+/* Main content area */
 main {
     width: 95%;
     max-width: 1400px;
     margin: 0 auto;
 }
 
+/* Add some spacing between sections */
+section {
+    margin-bottom: 40px;
+}
+
+/* Better paragraph spacing */
+p {
+    margin-bottom: 15px;
+}
+
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Images */
+figure {
+    text-align: center;
+}
+
+figcaption {
+    font-style: italic;
+    margin-top: 10px;
+    color: #666;
+}
+
+/* Responsive design for tablets */
 @media screen and (min-width: 601px) and (max-width: 980px) {
     main {
         width: 90%;
@@ -73,6 +95,7 @@ main {
     }
 }
 
+/* Responsive design for mobile */
 @media screen and (max-width: 600px) {
     main {
         width: 95%;
@@ -92,6 +115,7 @@ main {
     }
 }
 
+/* Tables */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -110,6 +134,7 @@ th, td {
     border: 1px solid #ddd;
 }
 
+/* Alternating row colors */
 tbody tr:nth-child(even) {
     background-color: #f9f9f9;
 }
@@ -127,6 +152,7 @@ td:last-child {
     color: #666;
 }
 
+/* Forms */
 form {
     max-width: 800px;
     margin: 0 auto;
@@ -155,6 +181,7 @@ label {
     color: #444;
 }
 
+/* Input fields */
 input[type="text"],
 input[type="url"],
 input[type="date"],
@@ -173,6 +200,7 @@ textarea {
     min-height: 80px;
 }
 
+/* Focus state */
 input:focus,
 textarea:focus {
     outline: none;
@@ -180,10 +208,13 @@ textarea:focus {
     box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
 }
 
+/* Required indicator - darker red for WCAG contrast */
 .required {
-    color: red;
+    color: #cc0000;
+    font-weight: bold;
 }
 
+/* Button styling */
 .button-group {
     text-align: center;
     margin: 30px 0;
@@ -200,50 +231,56 @@ button {
     transition: background-color 0.3s, transform 0.1s;
 }
 
+/* Submit button */
 button[type="submit"] {
-    background-color: #4CAF50;
+    background-color: #2e7d32;
     color: white;
 }
 
 button[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #1b5e20;
 }
 
+/* Reset button - darker orange for WCAG */
 button[type="reset"] {
-    background-color: #ff9800;
+    background-color: #bf360c;
     color: white;
 }
 
 button[type="reset"]:hover {
-    background-color: #e68900;
+    background-color: #a02d0a;
 }
 
+/* Delete/Clear button */
 button[type="button"],
 #clearBtn {
-    background-color: #f44336;
+    background-color: #c62828;
     color: white;
 }
 
 button[type="button"]:hover,
 #clearBtn:hover {
-    background-color: #da190b;
+    background-color: #b71c1c;
 }
 
+/* Click effect */
 button:active {
     transform: scale(0.98);
 }
 
+/* Add course button */
 #addCourseBtn {
-    background-color: #2196F3;
+    background-color: #1565c0;
+    color: white;
     margin-top: 15px;
 }
 
 #addCourseBtn:hover {
-    background-color: #0b7dda;
+    background-color: #0d47a1;
 }
 
 .deleteCourseBtn {
-    background-color: #f44336;
+    background-color: #c62828;
     color: white;
     padding: 8px 15px;
     font-size: 0.9em;
@@ -251,9 +288,10 @@ button:active {
 }
 
 .deleteCourseBtn:hover {
-    background-color: #da190b;
+    background-color: #b71c1c;
 }
 
+/* Course entry styling */
 .course-entry {
     margin-bottom: 20px;
     padding: 15px;
@@ -266,6 +304,7 @@ button:active {
     margin: 15px 0;
 }
 
+/* Result display area */
 #result blockquote {
     font-style: italic;
     border-left: 4px solid #ccc;
@@ -298,13 +337,15 @@ button:active {
     background-color: #0b7dda;
 }
 
+/* General blockquote styling */
 blockquote {
-  font-style: italic;
-  border-left: 4px solid #ccc;
-  padding-left: 20px;
-  margin: 20px 0;
+    font-style: italic;
+    border-left: 4px solid #ccc;
+    padding-left: 20px;
+    margin: 20px 0;
 }
 
+/* Hamburger menu for mobile */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -321,6 +362,7 @@ blockquote {
     margin: 3px 0;
 }
 
+/* Show hamburger and toggle nav on small screens */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -332,6 +374,7 @@ blockquote {
         width: 100%;
     }
     
+    /* Show nav when active class is added by JS */
     header nav.active {
         display: flex;
     }
@@ -342,6 +385,7 @@ blockquote {
     }
 }
 
+/* Scroll to top button - shows after scrolling down */
 #scrollToTop {
     display: none;
     position: fixed;
